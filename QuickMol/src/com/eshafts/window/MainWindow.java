@@ -53,6 +53,7 @@ public class MainWindow {
 	 */
 	protected void createContents() {
 		shell = new Shell();
+		shell.setSize(850, 520);
 		
 		shell.setText("eShafts");
 		shell.setMaximized(true);
@@ -272,40 +273,52 @@ public class MainWindow {
 		mntmJmol.setText(LoadResource.RESOURCES.getString("protocol_jmol"));
 		
 		ToolBar toolBar = new ToolBar(shell, SWT.FLAT | SWT.RIGHT);
-		toolBar.setBackground(SWTResourceManager.getColor(SWT.COLOR_TITLE_BACKGROUND_GRADIENT));
+		toolBar.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_LIGHT_SHADOW));
 		FormData fd_toolBar = new FormData();
-		fd_toolBar.right = new FormAttachment(0, 520);
+		fd_toolBar.right = new FormAttachment(0, shell.getStyle() - 100);
 		fd_toolBar.top = new FormAttachment(0);
 		fd_toolBar.left = new FormAttachment(0);
 		toolBar.setLayoutData(fd_toolBar);
 		
 		ToolItem tltmNewItem = new ToolItem(toolBar, SWT.NONE);
-		tltmNewItem.setToolTipText("Open File");
+		tltmNewItem.setToolTipText(LoadResource.RESOURCES.getString("tooltip_open"));
 		tltmNewItem.setImage(SWTResourceManager.getImage(MainWindow.class, "/com/eshafts/resources/pic/openf.png"));
 		
 		ToolItem tltmNewItem_1 = new ToolItem(toolBar, SWT.NONE);
 		tltmNewItem_1.setImage(SWTResourceManager.getImage(MainWindow.class, "/com/eshafts/resources/pic/format.png"));
-		tltmNewItem_1.setToolTipText("Convert to a mol2 ile");
+		tltmNewItem_1.setToolTipText(LoadResource.RESOURCES.getString("tooltip_convert"));
 		
 		ToolItem tltmNewItem_2 = new ToolItem(toolBar, SWT.NONE);
-		tltmNewItem_2.setToolTipText("Generate 3D molecular model");
+		tltmNewItem_2.setToolTipText(LoadResource.RESOURCES.getString("tooltip_3dGen"));
 		tltmNewItem_2.setImage(SWTResourceManager.getImage(MainWindow.class, "/com/eshafts/resources/pic/3D.png"));
 		
 		ToolItem tltmNewItem_3 = new ToolItem(toolBar, SWT.NONE);
 		tltmNewItem_3.setImage(SWTResourceManager.getImage(MainWindow.class, "/com/eshafts/resources/pic/showH.png"));
-		tltmNewItem_3.setToolTipText("Show/Hide H");
+		tltmNewItem_3.setToolTipText(LoadResource.RESOURCES.getString("tooltip_showH"));
 		
 		ToolItem tltmNewItem_4 = new ToolItem(toolBar, SWT.NONE);
-		tltmNewItem_4.setText("New Item");
+		tltmNewItem_4.setImage(SWTResourceManager.getImage(MainWindow.class, "/com/eshafts/resources/pic/doSpin.png"));
+		tltmNewItem_4.setToolTipText(LoadResource.RESOURCES.getString("tooltip_spin"));
 		
 		ToolItem tltmNewItem_5 = new ToolItem(toolBar, SWT.NONE);
-		tltmNewItem_5.setText("New Item");
+		tltmNewItem_5.setImage(SWTResourceManager.getImage(MainWindow.class, "/com/eshafts/resources/pic/Reset.png"));
+		tltmNewItem_5.setToolTipText(LoadResource.RESOURCES.getString("tooltip_view"));
 		
-		ToolItem tltmNewItem_6 = new ToolItem(toolBar, SWT.NONE);
-		tltmNewItem_6.setText("New Item");
+		ToolItem tltmNewItem_6 = new ToolItem(toolBar, SWT.DROP_DOWN);
+		tltmNewItem_6.setImage(SWTResourceManager.getImage(MainWindow.class, "/com/eshafts/resources/pic/ball_stick.png"));
+		tltmNewItem_6.setToolTipText(LoadResource.RESOURCES.getString("tooltip_ligand"));
 		
 		ToolItem tltmNewItem_7 = new ToolItem(toolBar, SWT.NONE);
-		tltmNewItem_7.setText("New Item");
+		tltmNewItem_7.setImage(SWTResourceManager.getImage(MainWindow.class, "/com/eshafts/resources/pic/Optimize.png"));
+		tltmNewItem_7.setToolTipText(LoadResource.RESOURCES.getString("tooltip_minimize"));
+		
+		ToolItem tltmNewItem_8 = new ToolItem(toolBar, SWT.NONE);
+		tltmNewItem_8.setImage(SWTResourceManager.getImage(MainWindow.class, "/com/eshafts/resources/pic/modelKit.png"));
+		tltmNewItem_8.setToolTipText(LoadResource.RESOURCES.getString("tooltip_builder"));
+		
+		ToolItem tltmNewItem_9 = new ToolItem(toolBar, SWT.DROP_DOWN);
+		tltmNewItem_9.setImage(SWTResourceManager.getImage(MainWindow.class, "/com/eshafts/resources/pic/wireframe.png"));
+		tltmNewItem_9.setToolTipText(LoadResource.RESOURCES.getString("tooltip_protein"));
 
 	}
 }
