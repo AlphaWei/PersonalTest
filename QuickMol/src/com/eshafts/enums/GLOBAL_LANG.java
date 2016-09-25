@@ -6,10 +6,11 @@
 package com.eshafts.enums;
 
 /**
- * instruction: 
- * LANGUAGE.java 2016年6月6日 下午9:08:33 AlphaWei	
+ * 
+ * @author AlphaWei
+ *
  */
-public enum GLOBE_LANG {
+public enum GLOBAL_LANG {
 	MENUBAR_FILE("menubar_file","File"),
 	FILE_OPEN("file_open","Open File..."),
 	FILE_CREATE("file_create","New"),
@@ -45,7 +46,7 @@ public enum GLOBE_LANG {
 	private String key;
 	private String value;
 	
-	private GLOBE_LANG(String key, String value){
+	private GLOBAL_LANG(String key, String value){
 		this.key = key;
 		this.value = value;
 	}

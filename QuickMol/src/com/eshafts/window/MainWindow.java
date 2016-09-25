@@ -4,6 +4,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 
 import com.eshafts.module.language.LoadResource;
+import com.eshafts.utils.configuration.LoadConfig;
 
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.SWT;
@@ -25,7 +26,7 @@ public class MainWindow {
 	 */
 	public static void main(String[] args) {
 		try {
-			LoadResource.initLang("EN");
+			LoadResource.initLang(LoadConfig.GLOBAL_SET.getConfig("sysLang"));
 			MainWindow window = new MainWindow();
 			window.open();
 		} catch (Exception e) {
